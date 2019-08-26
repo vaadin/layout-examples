@@ -1,0 +1,21 @@
+target/
+build/
+
+# IDEA
+.idea/
+*.iml
+
+# MacOS
+.DS_Store
+
+# Eclipse
+.settings
+.classpath
+.project
+
+# NPM
+node_modules
+webpack.generated.js
+
+bower_components/
+.vscode

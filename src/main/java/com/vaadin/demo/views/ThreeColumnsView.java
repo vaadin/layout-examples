@@ -1,0 +1,73 @@
+package com.vaadin.demo.views;
+
+import com.vaadin.flow.component.Text;
+import com.vaadin.flow.component.html.Anchor;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.polymertemplate.Id;
+import com.vaadin.flow.router.PageTitle;
+import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouterLink;
+import com.vaadin.flow.templatemodel.TemplateModel;
+import com.vaadin.flow.component.Tag;
+import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+
+/**
+ * A Designer generated component for the three-columns template.
+ *
+ * Designer will add and remove fields with @Id mappings but
+ * does not overwrite or otherwise change this file.
+ */
+@Route("three-columns")
+@PageTitle("Three Columns")
+@Tag("three-columns-view")
+@JsModule("./src/views/three-columns-view.js")
+public class ThreeColumnsView extends PolymerTemplate<ThreeColumnsView.ThreeColumnsViewModel> {
+
+    @Id("header")
+    Div header;
+
+    @Id("sidebarLeft")
+    Div sidebarLeft;
+
+    @Id("sidebarRight")
+    Div sidebarRight;
+
+    @Id("main")
+    Div main;
+
+    @Id("footer")
+    Div footer;
+
+    /**
+     * Creates a new ThreeColumns.
+     */
+    public ThreeColumnsView() {
+        // You can initialise any data required for the connected UI components here.
+        header.add(new H1("Header text"));
+        sidebarLeft.add(
+                new VerticalLayout(
+                        new Anchor("", "Link 1"),
+                        new Anchor("", "Link 2"),
+                        new Anchor("", "Link 3"),
+                        new Anchor("", "Link 4")
+                ));
+        sidebarRight.add(
+                new VerticalLayout(
+                        new Anchor("", "Link 5"),
+                        new Anchor("", "Link 6")
+                ));
+        main.add(new Paragraph("Main content goes here."));
+        footer.add(new Paragraph("Footer text"));
+    }
+
+    /**
+     * This model binds properties between ThreeColumns and three-columns
+     */
+    public interface ThreeColumnsViewModel extends TemplateModel {
+        // Add setters and getters for template properties here.
+    }
+}
