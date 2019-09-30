@@ -117,6 +117,18 @@
             <artifactId>vaadin-testbench</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.artur</groupId>
+            <artifactId>github-corner</artifactId>
+            <version>2.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.addons</groupId>
+            <artifactId>googleanalyticstracker</artifactId>
+            <version>4.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
