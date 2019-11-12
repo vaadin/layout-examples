@@ -51,7 +51,7 @@ public class MainView extends AppLayout {
 
     private static Tab createTab(String title,
             Class<? extends Component> viewClass) {
-        return createTab(populateLink(new RouterLink(null, viewClass), title));
+        return createTab(new RouterLink(title, viewClass));
     }
 
     private static Tab createTab(Component content) {
@@ -59,10 +59,5 @@ public class MainView extends AppLayout {
         tab.addThemeVariants(TabVariant.LUMO_ICON_ON_TOP);
         tab.add(content);
         return tab;
-    }
-
-    private static <T extends HasComponents> T populateLink(T a, String title) {
-        a.add(title);
-        return a;
     }
 }
