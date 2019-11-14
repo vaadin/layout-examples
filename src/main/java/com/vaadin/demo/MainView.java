@@ -7,14 +7,17 @@ import org.vaadin.artur.github_corner.GitHubCorner;
 import org.vaadin.googleanalytics.tracking.EnableGoogleAnalytics;
 
 import com.vaadin.demo.views.IntroView;
+import com.vaadin.demo.views.PricingView;
 import com.vaadin.demo.views.ThreeColumnsView;
 import com.vaadin.flow.component.Component;
-import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.TabVariant;
 import com.vaadin.flow.component.tabs.Tabs;
+import com.vaadin.flow.router.AfterNavigationEvent;
+import com.vaadin.flow.router.AfterNavigationObserver;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
@@ -25,7 +28,8 @@ import com.vaadin.flow.theme.lumo.Lumo;
 @JsModule("./styles/shared-styles.js")
 @Theme(value = Lumo.class, variant = Lumo.LIGHT)
 @EnableGoogleAnalytics(value = "UA-658457-6")
-public class MainView extends AppLayout {
+@BodySize
+public class MainView extends AppLayout implements AfterNavigationObserver {
 
     private final Tabs menu;
 
@@ -46,6 +50,7 @@ public class MainView extends AppLayout {
         final List<Tab> tabs = new ArrayList<>();
         tabs.add(createTab("Intro", IntroView.class));
         tabs.add(createTab("ThreeColumns", ThreeColumnsView.class));
+        tabs.add(createTab("Pricing", PricingView.class));
         return tabs.toArray(new Tab[tabs.size()]);
     }
 
@@ -59,5 +64,24 @@ public class MainView extends AppLayout {
         tab.addThemeVariants(TabVariant.LUMO_ICON_ON_TOP);
         tab.add(content);
         return tab;
+    }
+
+    @Override
+    public void afterNavigation(AfterNavigationEvent event) {
+        // Select the matching navigation tab on page load
+        String location = event.getLocation().getFirstSegment();
+        menu.getChildren().forEach(component -> {
+            if (component instanceof Tab) {
+                Tab tab = (Tab) component;
+                tab.getChildren().findFirst().ifPresent(component1 -> {
+                    if (component1 instanceof RouterLink) {
+                        RouterLink link = (RouterLink) component1;
+                        if (link.getHref().equals(location)) {
+                            menu.setSelectedTab(tab);
+                        }
+                    }
+                });
+            }
+        });
     }
 }
