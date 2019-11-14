@@ -14,12 +14,6 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 
-/**
- * A Designer generated component for the three-columns template.
- *
- * Designer will add and remove fields with @Id mappings but
- * does not overwrite or otherwise change this file.
- */
 @Route(value = "three-columns", layout = MainView.class)
 @PageTitle("Three Columns")
 @Tag("three-columns-view")

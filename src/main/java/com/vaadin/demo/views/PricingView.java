@@ -24,12 +24,6 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.templatemodel.TemplateModel;
 
-/**
- * A Designer generated component for the three-columns template.
- *
- * Designer will add and remove fields with @Id mappings but does not overwrite
- * or otherwise change this file.
- */
 @Route(value = "pricing", layout = MainView.class)
 @PageTitle("Pricing")
 @Tag("pricing-view")
