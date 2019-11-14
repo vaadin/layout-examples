@@ -12,6 +12,11 @@ $_documentContainer.innerHTML = `
 
 <custom-style>
   <style include="common-styles">
+    html,
+    body {
+        height: 100%;
+    }
+  
     vaadin-app-layout vaadin-tab a:hover {
       text-decoration: none;
     }

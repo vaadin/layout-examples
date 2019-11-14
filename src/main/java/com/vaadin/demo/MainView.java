@@ -6,6 +6,7 @@ import java.util.List;
 import org.vaadin.artur.github_corner.GitHubCorner;
 import org.vaadin.googleanalytics.tracking.EnableGoogleAnalytics;
 
+import com.vaadin.demo.views.FixedNavStickyFooterView;
 import com.vaadin.demo.views.IntroView;
 import com.vaadin.demo.views.PricingView;
 import com.vaadin.demo.views.ThreeColumnsView;
@@ -54,6 +55,7 @@ public class MainView extends AppLayout implements AfterNavigationObserver {
         tabs.add(createTab("Intro", IntroView.class));
         tabs.add(createTab("ThreeColumns", ThreeColumnsView.class));
         tabs.add(createTab("Pricing", PricingView.class));
+        tabs.add(createTab("Fixed Nav & Sticky Footer", FixedNavStickyFooterView.class));
         return tabs.toArray(new Tab[tabs.size()]);
     }
 
