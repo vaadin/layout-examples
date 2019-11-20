@@ -27,13 +27,17 @@ class PricingView extends PolymerElement {
                 #header {
                     padding: var(--lumo-space-wide-l);
                     margin-bottom: var(--lumo-space-xl);
-                    border-bottom: 1px solid #dee2e6;
-                    box-shadow: var(--lumo-box-shadow-xs);
+                    box-shadow: 0 0 0 1px var(--lumo-contrast-5pct), var(--lumo-box-shadow-xs);
                 }
                 
                 #header h5 {
                     font-size: 1.4rem;
                     margin: 0;
+                }
+                vaadin-menu-bar {
+                    /* Make the menu bar to not go on top of the MainView AppLayout
+                    menu when scrolling down */
+                    z-index: 0;
                 }
                 
                 @media screen and (max-width: 759px) {
@@ -97,12 +101,12 @@ class PricingView extends PolymerElement {
 
                 #footer {
                     margin-top: var(--lumo-space-xl);
-                    border-top: 1px solid var(--lumo-shade-30pct);
+                    border-top: 1px solid var(--lumo-contrast-30pct);
                     padding-top: var(--lumo-space-xl);
                     padding-bottom: var(--lumo-space-l);
                     display: flex;
                     flex-wrap: wrap;
-                    --lumo-primary-text-color: var(--lumo-shade-70pct);
+                    --lumo-primary-text-color: var(--lumo-contrast-70pct);
                 }
                 
                 #footer > div {
@@ -119,7 +123,7 @@ class PricingView extends PolymerElement {
                 
                 .copyright {
                     font-size: var(--lumo-font-size-s);
-                    color: var(--lumo-shade-60pct);
+                    color: var(--lumo-contrast-60pct);
                 }
                 
                 [icon^="vaadin:vaadin-"] {

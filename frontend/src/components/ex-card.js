@@ -16,9 +16,9 @@ class ExCard extends PolymerElement {
                 :host {
                     display: flex;
                     flex-direction: column;
-                    box-shadow: var(--lumo-box-shadow-xs);
+                    box-shadow: 0 0 0 1px var(--lumo-contrast-5pct), var(--lumo-box-shadow-xs);
                     border-radius: var(--lumo-border-radius-m);
-                    border: 1px solid var(--lumo-shade-10pct);
+                    background: var(--lumo-base-color) linear-gradient(var(--lumo-tint-5pct), var(--lumo-tint-5pct));
                 }
                 
                 header {
