@@ -12,7 +12,7 @@ class ThreeColumnsView extends PolymerElement {
 
     static get template() {
         return html`
-            <style>
+            <style include="common-styles">
                 :host {
                     display: block;
                 }
@@ -23,27 +23,28 @@ class ThreeColumnsView extends PolymerElement {
 
                 #sidebarLeft {
                     grid-area: nav;
-                    background-color: aliceblue;
+                    background: var(--lumo-base-color) linear-gradient(hsla(125, 100%, 60%, .2), hsla(125, 100%, 60%, .2));
                 }
 
                 #header {
                     grid-area: header;
-                    background-color: pink;
+                    background: var(--lumo-base-color) linear-gradient(hsla(349, 100%, 60%, .2), hsla(349, 100%, 60%, .2));
                 }
 
                 #sidebarRight {
                     grid-area: aside;
-                    background-color: azure;
+                    background: var(--lumo-base-color) linear-gradient(hsla(44, 100%, 60%, .2), hsla(44, 100%, 60%, .2));
                 }
 
                 #main {
                     grid-area: content;
-                    background-color: lavender;
+                    background: var(--lumo-base-color) linear-gradient(hsla(227, 100%, 60%, .2), hsla(227, 100%, 60%, .2));
                 }
 
                 #footer {
                     grid-area: footer;
                     background-color: lightcoral;
+                    background: var(--lumo-base-color) linear-gradient(hsla(318, 100%, 60%, .2), hsla(318, 100%, 60%, .2));
                 }
 
                 @media only screen and (max-width: 699px) {
