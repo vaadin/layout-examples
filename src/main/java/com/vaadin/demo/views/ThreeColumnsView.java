@@ -18,7 +18,7 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 @PageTitle("Three Columns")
 @Tag("three-columns-view")
 @JsModule("./src/views/three-columns-view.js")
-public class ThreeColumnsView extends PolymerTemplate<ThreeColumnsView.ThreeColumnsViewModel> {
+public class ThreeColumnsView extends PolymerTemplate<TemplateModel> {
 
     @Id("header")
     Div header;
@@ -39,28 +39,15 @@ public class ThreeColumnsView extends PolymerTemplate<ThreeColumnsView.ThreeColu
      * Creates a new ThreeColumns.
      */
     public ThreeColumnsView() {
-        // You can initialise any data required for the connected UI components here.
+        // You can initialise any data required for the connected UI components
+        // here.
         header.add(new H1("Header text"));
-        sidebarLeft.add(
-                new VerticalLayout(
-                        new Anchor("", "Link 1"),
-                        new Anchor("", "Link 2"),
-                        new Anchor("", "Link 3"),
-                        new Anchor("", "Link 4")
-                ));
-        sidebarRight.add(
-                new VerticalLayout(
-                        new Anchor("", "Link 5"),
-                        new Anchor("", "Link 6")
-                ));
+        sidebarLeft.add(new VerticalLayout(new Anchor("", "Link 1"),
+                new Anchor("", "Link 2"), new Anchor("", "Link 3"),
+                new Anchor("", "Link 4")));
+        sidebarRight.add(new VerticalLayout(new Anchor("", "Link 5"),
+                new Anchor("", "Link 6")));
         main.add(new Paragraph("Main content goes here."));
         footer.add(new Paragraph("Footer text"));
-    }
-
-    /**
-     * This model binds properties between ThreeColumns and three-columns
-     */
-    public interface ThreeColumnsViewModel extends TemplateModel {
-        // Add setters and getters for template properties here.
     }
 }

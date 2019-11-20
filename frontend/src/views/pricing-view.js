@@ -151,12 +151,6 @@ class PricingView extends PolymerElement {
     static get is() {
         return 'pricing-view';
     }
-
-    static get properties() {
-        return {
-            // Declare your properties here.
-        };
-    }
 }
 
 customElements.define(PricingView.is, PricingView);

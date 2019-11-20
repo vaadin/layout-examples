@@ -28,7 +28,7 @@ import com.vaadin.flow.templatemodel.TemplateModel;
 @PageTitle("Pricing")
 @Tag("pricing-view")
 @JsModule("./src/views/pricing-view.js")
-public class PricingView extends PolymerTemplate<PricingView.PricingViewModel> {
+public class PricingView extends PolymerTemplate<TemplateModel> {
 
     @Id("header")
     Div header;
@@ -59,35 +59,28 @@ public class PricingView extends PolymerTemplate<PricingView.PricingViewModel> {
         ExCard card;
 
         card = new ExCard("Free");
-        card.add(new UnorderedList(
-                new ListItem("10 users included"),
-                new ListItem("2 GB of storage"),
-                new ListItem("Email support"),
-                new ListItem("Help center access")
-        ));
+        card.add(new UnorderedList(new ListItem("10 users included"),
+                new ListItem("2 GB of storage"), new ListItem("Email support"),
+                new ListItem("Help center access")));
         card.add(new Button("Sign up for free"));
         cardList.add(card);
         Button button;
 
         card = new ExCard("Pro");
-        card.add(new UnorderedList(
-                new ListItem("20 users included"),
+        card.add(new UnorderedList(new ListItem("20 users included"),
                 new ListItem("10 GB of storage"),
                 new ListItem("Priority email support"),
-                new ListItem("Help center access")
-        ));
+                new ListItem("Help center access")));
         button = new Button("Get started");
         button.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         card.add(button);
         cardList.add(card);
 
         card = new ExCard("Enterprise");
-        card.add(new UnorderedList(
-                new ListItem("30 users included"),
+        card.add(new UnorderedList(new ListItem("30 users included"),
                 new ListItem("15 GB of storage"),
                 new ListItem("Phone and email support"),
-                new ListItem("Help center access")
-        ));
+                new ListItem("Help center access")));
         button = new Button("Contact us");
         button.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         card.add(button);
@@ -125,42 +118,28 @@ public class PricingView extends PolymerTemplate<PricingView.PricingViewModel> {
 
         box = new Div();
         box.add(new H5("Features"));
-        box.add(new UnorderedList(
-                new ListItem(new Anchor("#", "Cool stuff")),
+        box.add(new UnorderedList(new ListItem(new Anchor("#", "Cool stuff")),
                 new ListItem(new Anchor("#", "Random feature")),
                 new ListItem(new Anchor("#", "Team feature")),
                 new ListItem(new Anchor("#", "Stuff for developers")),
                 new ListItem(new Anchor("#", "Another one")),
-                new ListItem(new Anchor("#", "Last time"))
-        ));
+                new ListItem(new Anchor("#", "Last time"))));
         footer.add(box);
 
         box = new Div();
         box.add(new H5("Resources"));
-        box.add(new UnorderedList(
-                new ListItem(new Anchor("#", "Resource")),
+        box.add(new UnorderedList(new ListItem(new Anchor("#", "Resource")),
                 new ListItem(new Anchor("#", "Resource name")),
                 new ListItem(new Anchor("#", "Another resource")),
-                new ListItem(new Anchor("#", "Final resource"))
-        ));
+                new ListItem(new Anchor("#", "Final resource"))));
         footer.add(box);
 
         box = new Div();
         box.add(new H5("About"));
-        box.add(new UnorderedList(
-                new ListItem(new Anchor("#", "Team")),
+        box.add(new UnorderedList(new ListItem(new Anchor("#", "Team")),
                 new ListItem(new Anchor("#", "Locations")),
                 new ListItem(new Anchor("#", "Privacy")),
-                new ListItem(new Anchor("#", "Terms"))
-        ));
+                new ListItem(new Anchor("#", "Terms"))));
         footer.add(box);
-    }
-
-    /**
-     * This model binds properties between server side PricingView and client
-     * side &lt;pricing-view&gt;
-     */
-    public interface PricingViewModel extends TemplateModel {
-        // Add setters and getters for template properties here.
     }
 }

@@ -38,7 +38,8 @@ public class MainView extends AppLayout implements AfterNavigationObserver {
 
     public MainView() {
         menu = createMenuTabs();
-        addToNavbar(new Button("Toggle theme", buttonClickEvent -> getElement().executeJs("window.utils.toggleTheme();")));
+        addToNavbar(new Button("Toggle theme", buttonClickEvent -> getElement()
+                .executeJs("window.utils.toggleTheme();")));
         addToNavbar(menu);
         addToNavbar(new GitHubCorner("vaadin", "layout-examples"));
     }
@@ -55,7 +56,8 @@ public class MainView extends AppLayout implements AfterNavigationObserver {
         tabs.add(createTab("Intro", IntroView.class));
         tabs.add(createTab("ThreeColumns", ThreeColumnsView.class));
         tabs.add(createTab("Pricing", PricingView.class));
-        tabs.add(createTab("Fixed Nav & Sticky Footer", FixedNavStickyFooterView.class));
+        tabs.add(createTab("Fixed Nav & Sticky Footer",
+                FixedNavStickyFooterView.class));
         return tabs.toArray(new Tab[tabs.size()]);
     }
 

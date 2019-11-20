@@ -99,12 +99,6 @@ class ThreeColumnsView extends PolymerElement {
     static get is() {
         return 'three-columns-view';
     }
-
-    static get properties() {
-        return {
-            // Declare your properties here.
-        };
-    }
 }
 
 customElements.define(ThreeColumnsView.is, ThreeColumnsView);
