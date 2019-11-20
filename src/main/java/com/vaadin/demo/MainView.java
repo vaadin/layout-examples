@@ -11,6 +11,7 @@ import com.vaadin.demo.views.PricingView;
 import com.vaadin.demo.views.ThreeColumnsView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.page.BodySize;
 import com.vaadin.flow.component.tabs.Tab;
@@ -26,6 +27,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
  * The main view is a top-level placeholder for other views.
  */
 @JsModule("./styles/shared-styles.js")
+@JsModule("./src/utils.js")
 @Theme(value = Lumo.class, variant = Lumo.LIGHT)
 @EnableGoogleAnalytics(value = "UA-658457-6")
 @BodySize
@@ -35,6 +37,7 @@ public class MainView extends AppLayout implements AfterNavigationObserver {
 
     public MainView() {
         menu = createMenuTabs();
+        addToNavbar(new Button("Toggle theme", buttonClickEvent -> getElement().executeJs("window.utils.toggleTheme();")));
         addToNavbar(menu);
         addToNavbar(new GitHubCorner("vaadin", "layout-examples"));
     }
