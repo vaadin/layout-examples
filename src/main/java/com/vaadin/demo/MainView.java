@@ -29,7 +29,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
 @JsModule("./styles/shared-styles.js")
 @JsModule("./src/utils.js")
 @Theme(value = Lumo.class, variant = Lumo.LIGHT)
-@EnableGoogleAnalytics(value = "UA-658457-6")
+@EnableGoogleAnalytics(value = "UA-658457-6", pageviewPrefix = "layout-examples/")
 @BodySize
 public class MainView extends AppLayout implements AfterNavigationObserver {
 
