@@ -1,6 +1,7 @@
 package com.vaadin.demo.views;
 
 import com.vaadin.demo.MainView;
+import com.vaadin.demo.components.ExAddContent;
 import com.vaadin.demo.components.ExCard;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
@@ -87,6 +88,8 @@ public class PricingView extends PolymerTemplate<TemplateModel> {
         cardList.add(card);
 
         main.add(cardList);
+
+        main.add(new ExAddContent());
 
         createFooter();
     }

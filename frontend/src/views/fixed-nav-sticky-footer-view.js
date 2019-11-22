@@ -27,6 +27,7 @@ class FixedNavStickyFooterView extends PolymerElement {
                 }
                 
                 #header {
+                    z-index: 1;
                     position: fixed;
                     right: 0;
                     left: 0;

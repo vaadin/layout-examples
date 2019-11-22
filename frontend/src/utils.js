@@ -1,3 +1,9 @@
+const toggleThemeKeyUpHandler = e => {
+    if (e.key === 't') {
+        window.utils.toggleTheme();
+    }
+};
+
 window.utils = window.utils || {
     toggleTheme: () => {
         const currentTheme = document.documentElement.getAttribute('theme') || document.body.getAttribute('theme');
@@ -6,5 +12,11 @@ window.utils = window.utils || {
         // height of page when html/body height is automatic.
         document.documentElement.setAttribute('theme', newTheme);
         document.body.removeAttribute('theme');
+    },
+
+    activateToggleThemeGlobalShortcut: () => {
+        document.addEventListener('keyup', toggleThemeKeyUpHandler, false);
     }
 };
+
+window.utils.activateToggleThemeGlobalShortcut();

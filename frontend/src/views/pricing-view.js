@@ -34,11 +34,6 @@ class PricingView extends PolymerElement {
                     font-size: 1.4rem;
                     margin: 0;
                 }
-                vaadin-menu-bar {
-                    /* Make the menu bar to not go on top of the MainView AppLayout
-                    menu when scrolling down */
-                    z-index: 0;
-                }
                 
                 @media screen and (max-width: 759px) {
                     #header {

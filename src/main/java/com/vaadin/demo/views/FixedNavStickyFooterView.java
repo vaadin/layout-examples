@@ -1,6 +1,7 @@
 package com.vaadin.demo.views;
 
 import com.vaadin.demo.MainView;
+import com.vaadin.demo.components.ExAddContent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Html;
 import com.vaadin.flow.component.Tag;
@@ -58,6 +59,7 @@ public class FixedNavStickyFooterView extends PolymerTemplate<TemplateModel> {
                 + " If there is more content than fits the viewport, the footer"
                 + " will be pushed down and will be visible only when scrolled"
                 + " to the bottom of the page."));
+        main.add(new ExAddContent());
 
         footer.add(new Paragraph("Place sticky footer content here."));
     }
