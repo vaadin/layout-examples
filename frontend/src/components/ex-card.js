@@ -30,11 +30,11 @@ class ExCard extends PolymerElement {
                 }
                 
                 main {
-                    padding:  var(--lumo-space-m);
+                    padding:  var(--excard-padding, var(--lumo-space-m));
                     text-align: center;
                 }
             </style>
-            <header>[[title]]</header>
+            <header><slot name="title">[[title]]</slot></header>
             <main><slot></slot></main>
         `;
     }
