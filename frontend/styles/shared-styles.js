@@ -43,7 +43,7 @@ $_documentContainer.innerHTML = `
 <dom-module id="app-layout-theme" theme-for="vaadin-app-layout">
   <template>
     <style>
-      [part="navbar"] {
+      :host([theme~="app-nav-layout"]) [part="navbar"] {
         align-items: center;
         justify-content: center;
       }

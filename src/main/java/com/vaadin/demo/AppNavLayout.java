@@ -24,6 +24,7 @@ public class AppNavLayout extends AppLayout implements AfterNavigationObserver {
     private final Tabs menu;
 
     public AppNavLayout() {
+        getElement().getThemeList().add("app-nav-layout");
         menu = createMenuTabs();
         addToNavbar(menu);
         addToNavbar(new GitHubCorner("vaadin", "layout-examples"));
