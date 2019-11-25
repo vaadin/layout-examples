@@ -41,7 +41,8 @@ class IntroView extends PolymerElement {
                     which is a very flexible way to create layouts but notably doesn't work in IE 11, Safari 9 or older browsers. 
                 </p>
                 <ul>
-                    <li><a router-link href="three-columns">Three Columns</a> (CSS Grid)</li>
+                    <li><a router-link href="three-columns">Three Columns</a> (CSS Grid) - A grid layout with header, footer and two sidebars</li>
+                    <li><a router-link href="two-columns">Two Columns</a> (CSS Grid) - A grid layout with header, footer and one sidebar</li>
                 </ul>
                 
                 <h2>Complete layout examples</h2>
