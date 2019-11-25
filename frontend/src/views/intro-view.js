@@ -52,6 +52,7 @@ class IntroView extends PolymerElement {
                     <li><a router-link href="pricing">Pricing</a></li>
                     <li><a router-link href="fixed-nav-sticky-footer">Fixed Nav &amp; Sticky Footer</a></li>
                     <li><a router-link href="app-layout-basic">Basic App Layout</a> - A basic example of using <a href="https://vaadin.com/components/vaadin-app-layout/"><code>AppLayout</code></a></li>
+                    <li><a router-link href="login-form">Login Form</a></li>
                 </ul>
             </main>
         `;
