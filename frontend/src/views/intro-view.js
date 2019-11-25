@@ -43,6 +43,7 @@ class IntroView extends PolymerElement {
                 <ul>
                     <li><a router-link href="three-columns">Three Columns</a> (CSS Grid) - A grid layout with header, footer and two sidebars</li>
                     <li><a router-link href="two-columns">Two Columns</a> (CSS Grid) - A grid layout with header, footer and one sidebar</li>
+                    <li><a router-link href="centered-content">Centered Content</a> - A horizontally centered container with a maximum width</li>
                 </ul>
                 
                 <h2>Complete layout examples</h2>
