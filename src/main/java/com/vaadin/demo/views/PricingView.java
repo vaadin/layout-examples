@@ -40,9 +40,6 @@ public class PricingView extends PolymerTemplate<TemplateModel> {
     @Id("footer")
     Div footer;
 
-    /**
-     * Creates a new Pricing.
-     */
     public PricingView() {
         createHeader();
 

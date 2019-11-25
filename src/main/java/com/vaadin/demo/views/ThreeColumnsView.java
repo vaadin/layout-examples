@@ -35,12 +35,7 @@ public class ThreeColumnsView extends PolymerTemplate<TemplateModel> {
     @Id("footer")
     Div footer;
 
-    /**
-     * Creates a new ThreeColumns.
-     */
     public ThreeColumnsView() {
-        // You can initialise any data required for the connected UI components
-        // here.
         header.add(new H1("Header text"));
         sidebarLeft.add(new VerticalLayout(new Anchor("", "Link 1"),
                 new Anchor("", "Link 2"), new Anchor("", "Link 3"),
