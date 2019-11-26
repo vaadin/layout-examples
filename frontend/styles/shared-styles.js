@@ -1,20 +1,34 @@
-import "@vaadin/vaadin-charts/theme/vaadin-chart-default-theme";
+import '@vaadin/vaadin-charts/theme/vaadin-chart-default-theme.js';
+import '@vaadin/vaadin-lumo-styles/all-imports.js';
 
 const $_documentContainer = document.createElement('template');
 
 $_documentContainer.innerHTML = `
+<dom-module id="common-styles">
+  <template>
+    <style include="lumo-color lumo-typography"></style>
+  </template>
+</dom-module>
+
 <custom-style>
-  <style>
-    vaadin-app-layout vaadin-tab a:hover {
-      text-decoration: none;
+  <style include="common-styles">
+    html,
+    body {
+        height: 100%;
     }
   </style>
 </custom-style>
 
+<dom-module id="menu-bar-theme" theme-for="vaadin-menu-bar">
+  <template>
+    <style include="common-styles"></style>
+  </template>
+</dom-module>
+
 <dom-module id="app-layout-theme" theme-for="vaadin-app-layout">
   <template>
     <style>
-      [part="navbar"] {
+      :host([theme~="app-nav-layout"]) [part="navbar"] {
         align-items: center;
         justify-content: center;
       }

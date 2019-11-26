@@ -1,14 +1,14 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 
 /**
- * `three-columns-view`
+ * `two-columns-view`
  *
- * ThreeColumnsView element.
+ * TwoColumnsView element.
  *
  * @customElement
  * @polymer
  */
-class ThreeColumnsView extends PolymerElement {
+class TwoColumnsView extends PolymerElement {
 
     static get template() {
         return html`
@@ -21,7 +21,7 @@ class ThreeColumnsView extends PolymerElement {
                     margin: 0 auto; /* Horizontally center the layout grid if there is space around it */
                 }
 
-                #sidebarLeft {
+                #sidebar {
                     grid-area: nav;
                     background: var(--lumo-base-color) linear-gradient(hsla(125, 100%, 60%, .2), hsla(125, 100%, 60%, .2));
                 }
@@ -29,11 +29,6 @@ class ThreeColumnsView extends PolymerElement {
                 #header {
                     grid-area: header;
                     background: var(--lumo-base-color) linear-gradient(hsla(349, 100%, 60%, .2), hsla(349, 100%, 60%, .2));
-                }
-
-                #sidebarRight {
-                    grid-area: aside;
-                    background: var(--lumo-base-color) linear-gradient(hsla(44, 100%, 60%, .2), hsla(44, 100%, 60%, .2));
                 }
 
                 #main {
@@ -56,7 +51,6 @@ class ThreeColumnsView extends PolymerElement {
                         grid-template-areas: "nav"
                         "header"
                         "content"
-                        "aside"
                         "footer";
                     }
                 }
@@ -69,7 +63,6 @@ class ThreeColumnsView extends PolymerElement {
                         grid-template-rows: auto ;
                         grid-template-areas: "header header header"
                         "nav . content"
-                        "aside . content"
                         "footer footer footer";
                     }
                 }
@@ -77,28 +70,27 @@ class ThreeColumnsView extends PolymerElement {
                 @media only screen and (min-width: 980px) {
                     .wrapper {
                         display: grid;
-                        grid-template-columns: 200px 40px auto 40px 200px;
+                        grid-template-columns: 200px 40px auto;
                         grid-template-rows: auto ;
-                        grid-template-areas: "header header header header header"
-                        "nav . content . aside"
-                        "footer footer footer footer footer";
+                        grid-template-areas: "header header header"
+                        "nav . content"
+                        "footer footer footer";
                         max-width: 1100px;
                     }
                 }
             </style>
             <article class="wrapper">
-                <div id="sidebarLeft"></div>
+                <div id="sidebar"></div>
                 <div id="header"></div>
                 <div id="main"></div>
-                <div id="sidebarRight"></div>
                 <div id="footer"></div>
             </article>
         `;
     }
 
     static get is() {
-        return 'three-columns-view';
+        return 'two-columns-view';
     }
 }
 
-customElements.define(ThreeColumnsView.is, ThreeColumnsView);
+customElements.define(TwoColumnsView.is, TwoColumnsView);
