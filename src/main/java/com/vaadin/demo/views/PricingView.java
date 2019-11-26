@@ -55,6 +55,7 @@ public class PricingView extends PolymerTemplate<TemplateModel> {
         Div cardList = new Div();
         cardList.addClassName("card-list");
         ExCard card;
+        Button button;
 
         card = new ExCard("Free");
         card.add(new UnorderedList(new ListItem("10 users included"),
@@ -62,7 +63,6 @@ public class PricingView extends PolymerTemplate<TemplateModel> {
                 new ListItem("Help center access")));
         card.add(new Button("Sign up for free"));
         cardList.add(card);
-        Button button;
 
         card = new ExCard("Pro");
         card.add(new UnorderedList(new ListItem("20 users included"),
