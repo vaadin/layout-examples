@@ -1,5 +1,5 @@
-import "@vaadin/vaadin-charts/theme/vaadin-chart-default-theme.js";
-import "@vaadin/vaadin-lumo-styles/all-imports.js";
+import '@vaadin/vaadin-charts/theme/vaadin-chart-default-theme.js';
+import '@vaadin/vaadin-lumo-styles/all-imports.js';
 
 const $_documentContainer = document.createElement('template');
 
