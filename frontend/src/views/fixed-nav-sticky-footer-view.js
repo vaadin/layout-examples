@@ -44,8 +44,7 @@ class FixedNavStickyFooterView extends PolymerElement {
                     margin-right: var(--lumo-space-s);
                 }
 
-                #header a,
-                #header span {
+                #header a {
                     display: inline-block;
                     margin: var(--lumo-space-s);
                 }
