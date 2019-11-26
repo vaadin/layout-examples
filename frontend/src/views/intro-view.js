@@ -25,6 +25,17 @@ class IntroView extends PolymerElement {
                     padding: 0 var(--lumo-space-m);
                 }
 
+                kbd {
+                    font-family: var(--lumo-font-family);
+                    display: inline-block;
+                    background: var(--lumo-contrast-10pct);
+                    padding: var(--lumo-space-wide-xs);
+                    margin: 0 var(--lumo-space-wide-xs);
+                    border-radius: var(--lumo-border-radius-s);
+                    box-shadow: 0 0 0 1px var(--lumo-contrast-10pct), var(--lumo-box-shadow-xs);
+                    font-size: var(--lumo-font-size-m);
+                }
+
                 .card-list {
                     display: flex;
                     margin: var(--lumo-space-xl) calc(var(--lumo-space-m) * -1);

@@ -6,18 +6,7 @@ const $_documentContainer = document.createElement('template');
 $_documentContainer.innerHTML = `
 <dom-module id="common-styles">
   <template>
-    <style include="lumo-color lumo-typography">
-        kbd {
-            font-family: var(--lumo-font-family);
-            display: inline-block;
-            background: var(--lumo-contrast-10pct);
-            padding: var(--lumo-space-wide-xs);
-            margin: 0 var(--lumo-space-wide-xs);
-            border-radius: var(--lumo-border-radius-s);
-            box-shadow: 0 0 0 1px var(--lumo-contrast-10pct), var(--lumo-box-shadow-xs);
-            font-size: var(--lumo-font-size-m);
-        }
-    </style>
+    <style include="lumo-color lumo-typography"></style>
   </template>
 </dom-module>
 
