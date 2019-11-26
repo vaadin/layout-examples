@@ -62,7 +62,6 @@ public class AppNavLayout extends AppLayout implements AfterNavigationObserver {
 
     private static Tab createTab(Component... content) {
         final Tab tab = new Tab();
-        // tab.addThemeVariants(TabVariant.LUMO_ICON_ON_TOP);
         tab.add(content);
         return tab;
     }
