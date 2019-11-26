@@ -121,7 +121,7 @@ class PricingView extends PolymerElement {
                     color: var(--lumo-contrast-60pct);
                 }
 
-                [icon^="vaadin:vaadin-"] {
+                .copyright-box > [icon] {
                     color: #00b4f0;
                 }
 
