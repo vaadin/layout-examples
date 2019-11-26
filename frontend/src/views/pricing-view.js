@@ -30,7 +30,7 @@ class PricingView extends PolymerElement {
                     box-shadow: 0 0 0 1px var(--lumo-contrast-5pct), var(--lumo-box-shadow-xs);
                 }
 
-                #header h5 {
+                #header h2 {
                     font-size: 1.4rem;
                     margin: 0;
                 }
@@ -52,7 +52,7 @@ class PricingView extends PolymerElement {
                         align-items: baseline;
                     }
 
-                    #header h5 {
+                    #header h2 {
                         flex: 1;
                     }
                 }
@@ -108,7 +108,7 @@ class PricingView extends PolymerElement {
                     flex: 1 0 20%;
                 }
 
-                #footer h5 {
+                #footer h2 {
                     font-size: var(--lumo-font-size-l);
                 }
 

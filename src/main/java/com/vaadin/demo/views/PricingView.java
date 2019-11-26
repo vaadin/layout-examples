@@ -11,7 +11,7 @@ import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
-import com.vaadin.flow.component.html.H5;
+import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.ListItem;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.html.UnorderedList;
@@ -103,7 +103,7 @@ public class PricingView extends PolymerTemplate<TemplateModel> {
     }
 
     public void createHeader() {
-        header.add(new H5("Company name"), createTopMenu());
+        header.add(new H2("Company name"), createTopMenu());
     }
 
     private void createFooter() {
@@ -117,7 +117,7 @@ public class PricingView extends PolymerTemplate<TemplateModel> {
         footer.add(box);
 
         box = new Div();
-        box.add(new H5("Features"));
+        box.add(new H2("Features"));
         box.add(new UnorderedList(new ListItem(new Anchor("#", "Cool stuff")),
                 new ListItem(new Anchor("#", "Random feature")),
                 new ListItem(new Anchor("#", "Team feature")),
@@ -127,7 +127,7 @@ public class PricingView extends PolymerTemplate<TemplateModel> {
         footer.add(box);
 
         box = new Div();
-        box.add(new H5("Resources"));
+        box.add(new H2("Resources"));
         box.add(new UnorderedList(new ListItem(new Anchor("#", "Resource")),
                 new ListItem(new Anchor("#", "Resource name")),
                 new ListItem(new Anchor("#", "Another resource")),
@@ -135,7 +135,7 @@ public class PricingView extends PolymerTemplate<TemplateModel> {
         footer.add(box);
 
         box = new Div();
-        box.add(new H5("About"));
+        box.add(new H2("About"));
         box.add(new UnorderedList(new ListItem(new Anchor("#", "Team")),
                 new ListItem(new Anchor("#", "Locations")),
                 new ListItem(new Anchor("#", "Privacy")),
