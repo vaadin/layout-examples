@@ -16,7 +16,7 @@ class CenteredContentView extends PolymerElement {
                 :host {
                     display: block;
                 }
-                
+
                 .wrapper {
                     margin: 0 auto;
                     max-width: 960px;

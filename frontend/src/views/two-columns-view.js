@@ -16,7 +16,7 @@ class TwoColumnsView extends PolymerElement {
                 :host {
                     display: block;
                 }
-                
+
                 .wrapper {
                     margin: 0 auto; /* Horizontally center the layout grid if there is space around it */
                 }

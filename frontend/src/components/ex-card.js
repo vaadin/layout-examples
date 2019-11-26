@@ -20,7 +20,7 @@ class ExCard extends PolymerElement {
                     border-radius: var(--lumo-border-radius-m);
                     background: var(--lumo-base-color) linear-gradient(var(--lumo-tint-5pct), var(--lumo-tint-5pct));
                 }
-                
+
                 header {
                     background: var(--lumo-shade-5pct);
                     border-bottom: 1px solid var(--lumo-shade-20pct);
@@ -28,7 +28,7 @@ class ExCard extends PolymerElement {
                     text-align: center;
                     font-size: 1.4rem;
                 }
-                
+
                 main {
                     padding: var(--excard-padding, var(--lumo-space-m));
                     text-align: center;

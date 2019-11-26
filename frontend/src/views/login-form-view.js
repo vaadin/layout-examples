@@ -19,13 +19,13 @@ class LoginFormView extends PolymerElement {
                 :host {
                     display: block;
                 }
-                
+
                 .wrapper {
                     margin: 0 auto;
                     max-width: 400px;
                     padding: var(--lumo-space-xl) var(--lumo-space-l) 0;
                 }
-                
+
                 .card {
                     box-shadow: 0 0 0 1px var(--lumo-contrast-5pct), var(--lumo-box-shadow-s);
                     border-radius: var(--lumo-border-radius-m);
@@ -35,15 +35,15 @@ class LoginFormView extends PolymerElement {
                     display: flex;
                     flex-direction: column;
                 }
-                
+
                 h3 {
                     margin-top: var(--lumo-space-s);
                 }
-                
+
                 .card vaadin-button {
                     margin: var(--lumo-space-m) 0;
                 }
-                
+
                 #forgotPasswordButton {
                     margin: 0;
                 }

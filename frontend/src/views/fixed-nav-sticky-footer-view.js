@@ -19,13 +19,13 @@ class FixedNavStickyFooterView extends PolymerElement {
                     flex-direction: column;
                     height: 100%;
                 }
-                
+
                 .wrapper {
                     margin: 0 auto; /* Horizontally center the layout grid if there is space around it */
                     max-width: 960px;
                     padding: 0 var(--lumo-space-m);
                 }
-                
+
                 #header {
                     z-index: 1;
                     position: fixed;
@@ -38,31 +38,31 @@ class FixedNavStickyFooterView extends PolymerElement {
                     padding: 0 var(--lumo-space-s);
                     --lumo-primary-text-color: var(--lumo-contrast-90pct);
                 }
-                
+
                 .searchField {
                     padding: var(--lumo-space-s) 0;
                     margin-right: var(--lumo-space-s);
                 }
-                
+
                 #header a,
                 #header span {
                     display: inline-block;
                     margin: var(--lumo-space-s);
                 }
-                
+
                 #header .titleLink {
                     font-size: var(--lumo-font-size-xl);
                     margin-right: var(--lumo-space-m);
                 }
-                
+
                 main {
                     flex-shrink: 0;
                 }
-                
+
                 #main {
                     margin-top: 100px;
                 }
-                
+
                 footer {
                     margin-top: auto;
                     background-color: var(--lumo-shade-10pct);

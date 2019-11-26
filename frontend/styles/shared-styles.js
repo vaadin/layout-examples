@@ -27,7 +27,7 @@ $_documentContainer.innerHTML = `
     body {
         height: 100%;
     }
-  
+
     vaadin-app-layout vaadin-tab a:hover {
       text-decoration: none;
     }

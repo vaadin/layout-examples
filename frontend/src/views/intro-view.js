@@ -18,19 +18,19 @@ class IntroView extends PolymerElement {
                 :host {
                     display: block;
                 }
-                
+
                 .wrapper {
                     margin: 0 auto;
                     max-width: 960px;
                     padding: 0 var(--lumo-space-m);
                 }
-                
+
                 .card-list {
                     display: flex;
                     margin: var(--lumo-space-xl) calc(var(--lumo-space-m) * -1);
                     flex-wrap: wrap;
                 }
-                
+
                 .card-list > ex-card {
                     flex: 1 0 210px;
                     margin: var(--lumo-space-s);
@@ -39,13 +39,13 @@ class IntroView extends PolymerElement {
             </style>
             <main class="wrapper">
                 <h1>Layout Examples for Vaadin 14</h1>
-                
+
                 <p>
                     All of the examples are viewable with two themes (light and dark).
                     Toggle between the themes by clicking the button below or by pressing <kbd>T</kbd> on your keyboard.
                 </p>
                 <p><vaadin-button on-click="toggleTheme">Toggle Theme</vaadin-button></p>
-                
+
                 <h2>Basic examples</h2>
                 <p>
                     Examples showcasing individual building blocks or specific features for creating layouts.
@@ -67,7 +67,7 @@ class IntroView extends PolymerElement {
                         <p>A horizontally centered container with a maximum width</p>
                     </ex-card>
                 </div>
-                
+
                 <h2>Complete layout examples</h2>
                 <p>Styled ready to use layouts which you may use as is or customize to your liking.</p>
                 <div class="card-list">
