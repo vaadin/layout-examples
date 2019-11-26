@@ -24,13 +24,13 @@ class ExCard extends PolymerElement {
                 header {
                     background: var(--lumo-shade-5pct);
                     border-bottom: 1px solid var(--lumo-shade-20pct);
-                    padding:  var(--lumo-space-xs);
+                    padding: var(--lumo-space-xs);
                     text-align: center;
                     font-size: 1.4rem;
                 }
                 
                 main {
-                    padding:  var(--excard-padding, var(--lumo-space-m));
+                    padding: var(--excard-padding, var(--lumo-space-m));
                     text-align: center;
                 }
             </style>
