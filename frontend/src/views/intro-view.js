@@ -19,7 +19,7 @@ class IntroView extends PolymerElement {
                     display: block;
                 }
 
-                .wrapper {
+                main {
                     margin: 0 auto;
                     max-width: 960px;
                     padding: 0 var(--lumo-space-m);
@@ -48,7 +48,7 @@ class IntroView extends PolymerElement {
                     --excard-padding: var(--lumo-space-wide-m);
                 }
             </style>
-            <main class="wrapper">
+            <main>
                 <h1>Layout Examples for Vaadin 14</h1>
 
                 <p>
