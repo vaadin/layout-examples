@@ -1,5 +1,5 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import '@vaadin/vaadin-button';
+import '@vaadin/vaadin-button/vaadin-button.js';
 import '../components/ex-card.js';
 
 /**

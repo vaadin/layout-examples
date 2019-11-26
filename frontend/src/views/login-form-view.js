@@ -1,7 +1,7 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import '@vaadin/vaadin-text-field/vaadin-text-field.js';
+import '@vaadin/vaadin-button/vaadin-button.js';
 import '@vaadin/vaadin-text-field/vaadin-password-field.js';
-import '@vaadin/vaadin-button';
+import '@vaadin/vaadin-text-field/vaadin-text-field.js';
 
 /**
  * `login-form-view`
