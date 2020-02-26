@@ -26,9 +26,9 @@ import java.util.Locale;
 
 @Route("checkout-form")
 @PageTitle("Checkout form")
-public class CheckoutForm extends VerticalLayout {
+public class CheckoutFormView extends VerticalLayout {
 
-    public CheckoutForm() {
+    public CheckoutFormView() {
 
         setAlignItems(Alignment.CENTER);
         setSpacing(true);
