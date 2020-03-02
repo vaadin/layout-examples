@@ -1,0 +1,25 @@
+
+/* Styles specifically for larger screens. */
+@media (min-width: 893px) {
+
+	/* Add a bit of padding between form and grid */
+	vaadin-grid {
+		margin-left: 10px;
+    	min-width: 240px;
+	}
+}
+
+/* This makes the whole view responsive; the layout wraps if there is not enough room.
+   It also allows the grid to be on the right on big screens, and on top for small ones.
+ */
+.contentlayout {
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+}
+
+/* on smaller screens, add a bit of padding between grid and form (vertically) */
+vaadin-grid {
+	margin-bottom: 2em;
+	min-width: 250px;
+	flex-grow: 1;
+}

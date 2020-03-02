@@ -4,6 +4,7 @@ import com.vaadin.demo.views.entity.Product;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.checkbox.Checkbox;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.grid.ColumnTextAlign;
 import com.vaadin.flow.component.grid.Grid;
@@ -29,6 +30,7 @@ import java.util.Locale;
 
 @Route("checkout-form")
 @PageTitle("Checkout form")
+@CssImport("./styles/checkoutform.css")
 public class CheckoutFormView extends VerticalLayout {
 
     public CheckoutFormView() {
@@ -44,7 +46,7 @@ public class CheckoutFormView extends VerticalLayout {
         VerticalLayout billingAddressLayout = new VerticalLayout();
         billingAddressLayout.setWidth("65%");
         billingAddressLayout.setMinWidth("300px");
-        billingAddressLayout.setSpacing(false);
+        billingAddressLayout.setSpacing(true);
         billingAddressLayout.setPadding(false);
 
         // Flex-grow of the formLayout and Grid are set to 1 to be grown with
@@ -63,8 +65,8 @@ public class CheckoutFormView extends VerticalLayout {
         // help to wrap the page and give the direction of wrapping.
         // When it is wrapped Grid goes up.
         HorizontalLayout contentLayout = new HorizontalLayout();
-        contentLayout.getStyle().set("flex-wrap", "wrap");
-        contentLayout.getStyle().set("flex-direction", "row-reverse");
+        contentLayout.addClassName("contentlayout");
+        contentLayout.setSpacing(false);
         contentLayout.setHeightFull();
         contentLayout.setWidthFull();
 
@@ -182,8 +184,8 @@ public class CheckoutFormView extends VerticalLayout {
         saveButton.addThemeVariants(ButtonVariant.LUMO_LARGE,
                 ButtonVariant.LUMO_PRIMARY);
 
-        // Aligns button to center
-        saveButton.getStyle().set("margin", "auto");
+        // Aligns button to the right
+        saveButton.getStyle().set("margin-left", "auto");
 
         List<Product> list = new ArrayList<>();
         list.add(new Product(1, "Vanilla cracker", 7, "With wholemeal flour"));
@@ -197,21 +199,14 @@ public class CheckoutFormView extends VerticalLayout {
         Grid<Product> grid = new Grid<>();
         grid.setItems(list);
         grid.setWidth("30%");
-        grid.setMinWidth("250px");
-        grid.getElement().getStyle().set("flex-grow", "1");
         NumberFormat moneyFormat = NumberFormat.getCurrencyInstance(Locale.US);
 
         // Using Template to show two properties, one on top of another
         // property.
-        grid.addColumn(TemplateRenderer.<Product> of(
-                "<div><b>[[item.name]]</b><br> <small>[[item.description]]</small></div>")
-                .withProperty("name", Product::getName)
-                .withProperty("description", Product::getDescription))
-                .setWidth("80%");
-        grid.addColumn(TemplateRenderer
-                .<Product> of("<div>[[item.price]]</div>").withProperty("price",
-                        order -> moneyFormat.format(order.getPrice())))
-                .setTextAlign(ColumnTextAlign.END).setWidth("20%");
+        grid.addColumn(TemplateRenderer.<Product>of("<div><b>[[item.name]]</b><br> <small>[[item.description]]</small></div>")
+                .withProperty("name", Product::getName).withProperty("description", Product::getDescription)).setWidth("70%");
+        grid.addColumn(TemplateRenderer.<Product>of("<div>[[item.price]]</div>").withProperty("price", order -> moneyFormat.format(order.getPrice())))
+                .setTextAlign(ColumnTextAlign.END).setWidth("30%");
 
         billingAddressLayout.add(addressHeader, formLayout, saveButton);
         contentLayout.add(grid, billingAddressLayout);
