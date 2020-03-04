@@ -20,12 +20,16 @@ public class CarouselExampleView extends VerticalLayout {
 
         // A carousel contains multiple slides. Each slide can contain other
         // components. In this example, for each slide we have one layout
-        // component.
+        // component. This program uses a 3rd party addon and to use it,
+        // required dependency must be added to the pom.xml
+        // More information can be found here:
+        // https://vaadin.com/directory/component/carousel-addon/
         Slide slide1 = new Slide(createSlide1Layout());
         Slide slide2 = new Slide(createSlide2Layout());
         Slide slide3 = new Slide(createSlide3Layout());
 
-        Carousel carousel = new Carousel(slide1, slide2, slide3);
+        Carousel carousel = new Carousel(slide1, slide2, slide3)
+                .withAutoProgress().withSlideDuration(4).withStartPosition(1);
         carousel.setHideNavigation(false);
         carousel.setWidthFull();
         carousel.setHeight("500px");
