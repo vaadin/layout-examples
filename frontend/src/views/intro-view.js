@@ -103,6 +103,10 @@ class IntroView extends PolymerElement {
                         <p>A centered login form</p>
                     </ex-card>
                     <ex-card>
+                        <a slot="title" router-link href="checkout-form">Checkout form</a>
+                        <p>A checkout form including a billing address and summary of shopping card</p>
+                    </ex-card>
+                    <ex-card>
                         <a slot="title" router-link href="marketing">Marketing form</a>
                         <p>A marketing form including a main part and three more parts under the main part</p>
                     </ex-card>
