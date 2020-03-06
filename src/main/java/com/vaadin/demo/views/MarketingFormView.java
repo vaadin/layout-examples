@@ -57,15 +57,15 @@ public class MarketingFormView extends VerticalLayout {
                 + "risus. Etiam porta sem malesuada magna mollis  euismod. "
                 + "Donec sed odio dui.";
 
-        Component card1 = creadteCard(cardHeader, cardContent);
-        Component card2 = creadteCard(cardHeader, cardContent);
-        Component card3 = creadteCard(cardHeader, cardContent);
+        Component card1 = createCard(cardHeader, cardContent);
+        Component card2 = createCard(cardHeader, cardContent);
+        Component card3 = createCard(cardHeader, cardContent);
 
         container.add(card1, card2, card3);
         add(layout, container);
     }
 
-    private Component creadteCard(String cardHeader, String cardContent) {
+    private Component createCard(String cardHeader, String cardContent) {
         VerticalLayout layout = new VerticalLayout();
         layout.setWidth("30%");
         layout.setMinWidth("250px");

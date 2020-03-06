@@ -104,7 +104,7 @@ class IntroView extends PolymerElement {
                     </ex-card>
                     <ex-card>
                         <a slot="title" router-link href="marketing">Marketing form</a>
-                        <p>A marketing form including a main part and three more parts under the main part</p>
+                        <p>A marketing form including a main part and three responsive article cards under.</p>
                     </ex-card>
                 </div>
             </main>
