@@ -1,6 +1,6 @@
 package com.vaadin.demo.views;
 
-import com.vaadin.demo.views.entity.Product;
+import com.vaadin.demo.entity.Product;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.checkbox.Checkbox;
