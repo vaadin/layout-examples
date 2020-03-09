@@ -4,7 +4,6 @@ import com.vaadin.demo.entity.Book;
 import com.vaadin.demo.service.BookService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.html.Image;
@@ -14,16 +13,15 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.router.RouterLink;
 
 import java.util.List;
 
-@Route("Listing")
+@Route("listing")
 public class ListingFormView extends VerticalLayout {
 
     public ListingFormView() {
         setSizeFull();
-        setSpacing(true);
-        setPadding(true);
 
         Component header = createHeader();
         Component filter = createFilter();
@@ -52,35 +50,39 @@ public class ListingFormView extends VerticalLayout {
 
         Span formatSpan = new Span("Format");
         formatSpan.setWidthFull();
-        formatSpan.getStyle().set("text-align","center");
+        formatSpan.getStyle().set("text-align", "center");
         formatSpan.getStyle().set("background-color", "#D5D8DC");
 
-        Anchor paperback = new Anchor("#", "Paperback");
-        Anchor hardback = new Anchor("#", "Hardback");
-        Anchor audio = new Anchor("#", "Audio");
+        RouterLink paperback = new RouterLink("Paperback",
+                ListingFormView.class);
+        RouterLink hardback = new RouterLink("Hardback", ListingFormView.class);
+        RouterLink audio = new RouterLink("Audio", ListingFormView.class);
         layout.add(formatSpan, hardback, paperback, audio);
 
         Span priceSpan = new Span("Price");
         priceSpan.setWidthFull();
-        priceSpan.getStyle().set("text-align","center");
+        priceSpan.getStyle().set("text-align", "center");
         priceSpan.getStyle().set("background-color", "#D5D8DC");
 
-        Anchor price1 = new Anchor("#", "5$-10$");
-        Anchor price2 = new Anchor("#", "10$-20$");
-        Anchor price3 = new Anchor("#", "20$-50$");
-        Anchor price4 = new Anchor("#", "Over 50$");
+        RouterLink price1 = new RouterLink("5$-10$", ListingFormView.class);
+        RouterLink price2 = new RouterLink("10$-20$", ListingFormView.class);
+        RouterLink price3 = new RouterLink("20$-50$", ListingFormView.class);
+        RouterLink price4 = new RouterLink("Over 50$", ListingFormView.class);
 
         layout.add(priceSpan, price1, price2, price3, price4);
 
         Span authorSpan = new Span("Author");
         authorSpan.setWidthFull();
-        authorSpan.getStyle().set("text-align","center");
+        authorSpan.getStyle().set("text-align", "center");
         authorSpan.getStyle().set("background-color", "#D5D8DC");
 
-        Anchor author1 = new Anchor("#", "Vaadin");
-        Anchor author2 = new Anchor("#", "Vaadin team");
-        Anchor author3 = new Anchor("#", "Alejandro Duarte");
-        Anchor author4 = new Anchor("#", "Marko Grönroos");
+        RouterLink author1 = new RouterLink("Vaadin", ListingFormView.class);
+        RouterLink author2 = new RouterLink("Vaadin team",
+                ListingFormView.class);
+        RouterLink author3 = new RouterLink("Alejandro Duarte",
+                ListingFormView.class);
+        RouterLink author4 = new RouterLink("Marko Grönroos",
+                ListingFormView.class);
 
         layout.add(authorSpan, author1, author2, author3, author4);
         return layout;

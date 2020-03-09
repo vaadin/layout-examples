@@ -24,11 +24,11 @@ public class BookService {
                 new Book("images/DataCentricApplicationsWithVaadin.png",
                         "Data-Centric Applications with Vaadin 8",
                         "Alejandro Duarte", 34.99),
-                new Book("images/Vaadin7.png", "Book of Vaadin 7",
+                new Book("images/Vaadin 7.png", "Book of Vaadin 7",
                         "Vaadin team", 3.00),
-                new Book("images/Vaadin6.png", "Book of Vaadin 6",
+                new Book("images/Vaadin 6.png", "Book of Vaadin 6",
                         "Vaadin team", 2.89),
-                new Book("images/Vaadin6PreviewEdition.png",
+                new Book("images/Vaadin 6PreviewEdition.png",
                         "Book of Vaadin 6 Preview Edition", "Vaadin team",
                         1.89));
     }
