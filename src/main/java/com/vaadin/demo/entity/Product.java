@@ -1,4 +1,4 @@
-package com.vaadin.demo.views.entity;
+package com.vaadin.demo.entity;
 
 import java.util.Objects;
 
