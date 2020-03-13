@@ -3,6 +3,7 @@ package com.vaadin.demo;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.vaadin.flow.component.tabs.TabsVariant;
 import org.vaadin.artur.github_corner.GitHubCorner;
 
 import com.vaadin.demo.views.IntroView;
