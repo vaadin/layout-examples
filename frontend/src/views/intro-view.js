@@ -115,7 +115,7 @@ class IntroView extends PolymerElement {
                         <p>A carousel example</p>
                     </ex-card>
                     <ex-card>
-                        <a slot="title" router-link href="Listing">Listing form</a>
+                        <a slot="title" router-link href="listing">Listing form</a>
                         <p>Searching and filtering products</p>
                     </ex-card>
                 </div>
