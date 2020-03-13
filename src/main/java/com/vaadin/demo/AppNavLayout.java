@@ -34,6 +34,7 @@ public class AppNavLayout extends AppLayout implements AfterNavigationObserver {
         final Tabs tabs = new Tabs();
         tabs.setOrientation(Tabs.Orientation.HORIZONTAL);
         tabs.add(getAvailableTabs());
+        tabs.addThemeVariants(TabsVariant.LUMO_MINIMAL);
         return tabs;
     }
 
