@@ -29,7 +29,7 @@ public class CarouselExampleView extends VerticalLayout {
         Slide slide3 = new Slide(createSlide3Layout());
 
         Carousel carousel = new Carousel(slide1, slide2, slide3)
-                .withAutoProgress().withSlideDuration(4).withStartPosition(1);
+                .withAutoProgress().withSlideDuration(4).withStartPosition(0);
         carousel.setHideNavigation(false);
         carousel.setWidthFull();
         carousel.setHeight("500px");
