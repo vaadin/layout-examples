@@ -100,11 +100,13 @@ public class ListingFormView extends VerticalLayout {
         HorizontalLayout headerLayout = new HorizontalLayout();
         headerLayout.setWidthFull();
         TextField searchTextField = new TextField();
+        searchTextField.getStyle().set("overflow", "auto");
         searchTextField.setPlaceholder("Search");
         searchTextField.setValue("Vaadin");
         Button searchButton = new Button("Search");
+        searchButton.getStyle().set("overflow", "auto");
         headerLayout.add(menuBar, searchTextField, searchButton);
-        headerLayout.getStyle().set("background-color", "#D5D8DC");
+        headerLayout.getStyle().set("background-color", "#F8F8F8");
         return headerLayout;
     }
 
