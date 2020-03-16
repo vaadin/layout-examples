@@ -6,16 +6,18 @@ import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
+import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @Route("marketing")
-@PageTitle("Marketing form")
-public class MarketingFormView extends VerticalLayout {
+@PageTitle("Marketing page")
+public class MarketingView extends VerticalLayout {
 
-    public MarketingFormView() {
+    public MarketingView() {
         setSizeFull();
         setSpacing(true);
         setPadding(true);
@@ -37,7 +39,8 @@ public class MarketingFormView extends VerticalLayout {
                         + "website. It includes three supporting pieces of "
                         + "content. Use it as a starting point to create "
                         + "something more unique.");
-        Button button = new Button("Learn more >>");
+        Button button = new Button("Learn more",
+                new Icon(VaadinIcon.ANGLE_DOUBLE_RIGHT));
         button.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
 
         layout.add(header, contentDiv, button);
@@ -74,7 +77,8 @@ public class MarketingFormView extends VerticalLayout {
         Div content = new Div();
         content.setText(cardContent);
 
-        Button button = new Button("View details >>");
+        Button button = new Button("View details",
+                new Icon(VaadinIcon.ANGLE_DOUBLE_RIGHT));
         button.addThemeVariants(ButtonVariant.LUMO_SMALL);
 
         layout.getElement().getStyle().set("flex-grow", "1");
