@@ -105,12 +105,14 @@ public class ListingFormView extends VerticalLayout {
         Button searchButton = new Button("Search");
         headerLayout.add(menuBar, searchTextField, searchButton);
         headerLayout.getStyle().set("background-color", "#D5D8DC");
+        headerLayout.getStyle().set("flex-shrink", "0");
         return headerLayout;
     }
 
     private Component createBookComponent(String imageAddress, String title,
             String author, double price) {
         HorizontalLayout mainLayout = new HorizontalLayout();
+        mainLayout.getStyle().set("flex-shrink", "0");
         Image image = new Image(imageAddress, "");
         image.setWidth("30%");
         image.setHeight("40%");
