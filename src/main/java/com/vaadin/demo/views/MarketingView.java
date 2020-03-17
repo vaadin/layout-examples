@@ -27,6 +27,7 @@ public class MarketingView extends VerticalLayout {
         layout.getStyle().set("padding-left", "20%");
         layout.getStyle().set("padding-right", "20%");
         layout.getStyle().set("background-color", "#F5F5F5");
+        layout.getStyle().set("flex-shrink", "0");
         layout.setHeight("50%");
         layout.setWidthFull();
         layout.setSpacing(false);
