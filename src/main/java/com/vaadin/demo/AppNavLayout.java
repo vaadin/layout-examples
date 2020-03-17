@@ -3,6 +3,7 @@ package com.vaadin.demo;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.vaadin.flow.component.tabs.TabsVariant;
 import org.vaadin.artur.github_corner.GitHubCorner;
 
 import com.vaadin.demo.views.IntroView;
@@ -34,6 +35,7 @@ public class AppNavLayout extends AppLayout implements AfterNavigationObserver {
         final Tabs tabs = new Tabs();
         tabs.setOrientation(Tabs.Orientation.HORIZONTAL);
         tabs.add(getAvailableTabs());
+        tabs.addThemeVariants(TabsVariant.LUMO_MINIMAL);
         return tabs;
     }
 
