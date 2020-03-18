@@ -5,6 +5,7 @@ import com.flowingcode.vaadin.addons.carousel.Slide;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
+import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
@@ -34,7 +35,11 @@ public class CarouselExampleView extends VerticalLayout {
         carousel.setWidthFull();
         carousel.setHeight("500px");
 
-        add(carousel);
+        Anchor sourceCode = new Anchor(
+                "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/CarouselExampleView.java",
+                "View source code");
+
+        add(carousel, sourceCode);
     }
 
     private Component createSlide3Layout() {

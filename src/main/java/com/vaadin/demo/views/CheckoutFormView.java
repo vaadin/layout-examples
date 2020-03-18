@@ -8,6 +8,7 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.grid.ColumnTextAlign;
 import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Hr;
@@ -208,7 +209,11 @@ public class CheckoutFormView extends VerticalLayout {
         grid.addColumn(TemplateRenderer.<Product>of("<div>[[item.price]]</div>").withProperty("price", order -> moneyFormat.format(order.getPrice())))
                 .setTextAlign(ColumnTextAlign.END).setWidth("30%");
 
-        billingAddressLayout.add(addressHeader, formLayout, saveButton);
+        Anchor sourceCode = new Anchor(
+                "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/CheckoutFormView.java",
+                "View source code");
+
+        billingAddressLayout.add(addressHeader, formLayout, saveButton, sourceCode);
         contentLayout.add(grid, billingAddressLayout);
         add(header, contentLayout);
     }
