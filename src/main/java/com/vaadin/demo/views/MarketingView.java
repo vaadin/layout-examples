@@ -3,6 +3,7 @@ package com.vaadin.demo.views;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
+import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
@@ -66,7 +67,10 @@ public class MarketingView extends VerticalLayout {
         Component card3 = createCard(cardHeader, cardContent);
 
         container.add(card1, card2, card3);
-        add(layout, container);
+        Anchor sourceCode = new Anchor(
+                "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/MarketingView.java",
+                "View source code");
+        add(layout, container, sourceCode);
     }
 
     private Component createCard(String cardHeader, String cardContent) {
