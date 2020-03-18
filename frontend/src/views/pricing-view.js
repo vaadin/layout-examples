@@ -140,6 +140,7 @@ class PricingView extends PolymerElement {
                 <div id="main"></div>
                 <div id="footer"></div>
             </div>
+            <a href = "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/PricingView.java">View source code</a>
         `;
     }
 

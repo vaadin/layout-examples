@@ -75,6 +75,7 @@ class FixedNavStickyFooterView extends PolymerElement {
             <footer>
                 <div id="footer" class="wrapper"></div>
             </footer>
+            <a href = "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/FixedNavStickyFooterView.java">View source code</a>
         `;
     }
 

@@ -56,6 +56,7 @@ class LoginFormView extends PolymerElement {
                     <vaadin-button id="loginButton" theme="primary">Log in</vaadin-button>
                     <vaadin-button id="forgotPasswordButton" theme="tertiary-inline">Forgot password</vaadin-button>
                 </div>
+                <a href = "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/LoginFormView.java">View source code</a>
             </div>
         `;
     }

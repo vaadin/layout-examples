@@ -27,6 +27,7 @@ class CenteredContentView extends PolymerElement {
             <div class="wrapper">
                 <div id="main"></div>
             </div>
+            <div style = "margin-left: 40%;"><a href = "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/CenteredContentView.java">View source code</a></div>
         `;
     }
 

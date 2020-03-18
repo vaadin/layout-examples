@@ -3,6 +3,7 @@ package com.vaadin.demo.views;
 import com.vaadin.demo.MainView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
+import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
@@ -24,8 +25,13 @@ public class BasicAppLayoutView extends AppLayout {
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
         addToDrawer(tabs);
         VerticalLayout main = new VerticalLayout();
+
+        Anchor sourceCode = new Anchor(
+                "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/BasicAppLayoutView.java",
+                "View source code");
+
         main.add(new H1("Header text"),
-                new Paragraph("Main content goes here."));
+                new Paragraph("Main content goes here."), sourceCode);
         setContent(main);
     }
 }

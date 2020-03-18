@@ -213,7 +213,8 @@ public class CheckoutFormView extends VerticalLayout {
                 "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/CheckoutFormView.java",
                 "View source code");
 
-        billingAddressLayout.add(addressHeader, formLayout, saveButton, sourceCode);
+        billingAddressLayout.add(addressHeader, formLayout, saveButton,
+                sourceCode);
         contentLayout.add(grid, billingAddressLayout);
         add(header, contentLayout);
     }

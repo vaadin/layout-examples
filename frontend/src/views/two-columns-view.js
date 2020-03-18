@@ -85,6 +85,7 @@ class TwoColumnsView extends PolymerElement {
                 <div id="main"></div>
                 <div id="footer"></div>
             </article>
+            <div style = "margin-left: 40%;"><a href = "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/TwoColumnsView.java">View source code</a></div>
         `;
     }
 
