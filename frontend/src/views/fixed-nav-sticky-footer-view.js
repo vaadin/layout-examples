@@ -1,4 +1,5 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+import '@vaadin/vaadin-button/vaadin-button.js';
 import '../components/ex-card.js';
 
 /**
@@ -75,7 +76,12 @@ class FixedNavStickyFooterView extends PolymerElement {
             <footer>
                 <div id="footer" class="wrapper"></div>
             </footer>
-            <a href = "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/FixedNavStickyFooterView.java">View source code</a>
+            <vaadin-button
+                    style = "width: 200px;margin-left: auto;margin-right: auto;"
+                    onclick = "window.location.href='https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/FixedNavStickyFooterView.java'">
+              <img src = "icons/Github.png" slot="prefix"></img>
+              View source code
+            </vaadin-button>
         `;
     }
 

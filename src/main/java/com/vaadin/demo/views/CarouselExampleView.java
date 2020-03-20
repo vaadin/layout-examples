@@ -3,11 +3,12 @@ package com.vaadin.demo.views;
 import com.flowingcode.vaadin.addons.carousel.Carousel;
 import com.flowingcode.vaadin.addons.carousel.Slide;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
-import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
@@ -35,11 +36,12 @@ public class CarouselExampleView extends VerticalLayout {
         carousel.setWidthFull();
         carousel.setHeight("500px");
 
-        Anchor sourceCode = new Anchor(
-                "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/CarouselExampleView.java",
-                "View source code");
+        Button sourceButton = new Button("View source code",
+                new Image("icons/Github.png", "View source code"),
+                event -> UI.getCurrent().getPage().setLocation(
+                        "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/CarouselExampleView.java"));
 
-        add(carousel, sourceCode);
+        add(carousel, sourceButton);
     }
 
     private Component createSlide3Layout() {

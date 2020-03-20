@@ -1,9 +1,10 @@
 package com.vaadin.demo.views;
 
 import com.vaadin.demo.MainView;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
-import com.vaadin.flow.component.html.Anchor;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
@@ -26,12 +27,13 @@ public class BasicAppLayoutView extends AppLayout {
         addToDrawer(tabs);
         VerticalLayout main = new VerticalLayout();
 
-        Anchor sourceCode = new Anchor(
-                "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/BasicAppLayoutView.java",
-                "View source code");
+        Button sourceButton = new Button("View source code",
+                new Image("icons/Github.png", "View source code"),
+                event -> UI.getCurrent().getPage().setLocation(
+                        "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/BasicAppLayoutView.java"));
 
         main.add(new H1("Header text"),
-                new Paragraph("Main content goes here."), sourceCode);
+                new Paragraph("Main content goes here."), sourceButton);
         setContent(main);
     }
 }

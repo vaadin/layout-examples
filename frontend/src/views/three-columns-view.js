@@ -93,7 +93,12 @@ class ThreeColumnsView extends PolymerElement {
                 <div id="sidebarRight"></div>
                 <div id="footer"></div>
             </article>
-            <div style = "margin-left: 40%;"><a href = "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/ThreeColumnsView.java">View source code</a></div>
+            <vaadin-button
+                    style = "margin-left: 40%;"
+                    onclick = "window.location.href='https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/ThreeColumnsView.java'">
+              <img src = "icons/Github.png" slot="prefix"></img>
+              View source code
+            </vaadin-button>
         `;
     }
 
