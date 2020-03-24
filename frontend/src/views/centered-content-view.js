@@ -27,6 +27,12 @@ class CenteredContentView extends PolymerElement {
             <div class="wrapper">
                 <div id="main"></div>
             </div>
+            <vaadin-button
+                    style = "margin-left: 40%;"
+                    onclick = "window.location.href='https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/CenteredContentView.java'">
+              <img src = "icons/Github.png" slot="prefix"></img>
+              View source code
+            </vaadin-button>
         `;
     }
 

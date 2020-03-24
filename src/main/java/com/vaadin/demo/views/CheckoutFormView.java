@@ -1,6 +1,7 @@
 package com.vaadin.demo.views;
 
 import com.vaadin.demo.entity.Product;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.checkbox.Checkbox;
@@ -11,6 +12,7 @@ import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Hr;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -203,12 +205,23 @@ public class CheckoutFormView extends VerticalLayout {
 
         // Using Template to show two properties, one on top of another
         // property.
-        grid.addColumn(TemplateRenderer.<Product>of("<div><b>[[item.name]]</b><br> <small>[[item.description]]</small></div>")
-                .withProperty("name", Product::getName).withProperty("description", Product::getDescription)).setWidth("70%");
-        grid.addColumn(TemplateRenderer.<Product>of("<div>[[item.price]]</div>").withProperty("price", order -> moneyFormat.format(order.getPrice())))
+        grid.addColumn(TemplateRenderer.<Product> of(
+                "<div><b>[[item.name]]</b><br> <small>[[item.description]]</small></div>")
+                .withProperty("name", Product::getName)
+                .withProperty("description", Product::getDescription))
+                .setWidth("70%");
+        grid.addColumn(TemplateRenderer
+                .<Product> of("<div>[[item.price]]</div>").withProperty("price",
+                        order -> moneyFormat.format(order.getPrice())))
                 .setTextAlign(ColumnTextAlign.END).setWidth("30%");
 
-        billingAddressLayout.add(addressHeader, formLayout, saveButton);
+        Button sourceButton = new Button("View source code",
+                new Image("icons/Github.png", "View source code"),
+                event -> UI.getCurrent().getPage().setLocation(
+                        "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/CheckoutFormView.java"));
+
+        billingAddressLayout.add(addressHeader, formLayout, saveButton,
+                sourceButton);
         contentLayout.add(grid, billingAddressLayout);
         add(header, contentLayout);
     }

@@ -3,6 +3,7 @@ package com.vaadin.demo.views;
 import com.vaadin.demo.entity.Book;
 import com.vaadin.demo.service.BookService;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Hr;
@@ -38,7 +39,13 @@ public class ListingFormView extends VerticalLayout {
 
         HorizontalLayout mainLayout = new HorizontalLayout();
         mainLayout.add(filter, booksLayout);
-        add(header, mainLayout);
+
+        Button sourceButton = new Button("View source code",
+                new Image("icons/Github.png", "View source code"),
+                event -> UI.getCurrent().getPage().setLocation(
+                        "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/ListingFormView.java"));
+
+        add(header, mainLayout, sourceButton);
     }
 
     private Component createFilter() {

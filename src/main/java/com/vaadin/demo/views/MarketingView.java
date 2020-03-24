@@ -1,11 +1,13 @@
 package com.vaadin.demo.views;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -66,7 +68,12 @@ public class MarketingView extends VerticalLayout {
         Component card3 = createCard(cardHeader, cardContent);
 
         container.add(card1, card2, card3);
-        add(layout, container);
+        Button sourceButton = new Button("View source code",
+                new Image("icons/Github.png", "View source code"),
+                event -> UI.getCurrent().getPage().setLocation(
+                        "https://github.com/vaadin/layout-examples/blob/master/src/main/java/com/vaadin/demo/views/MarketingView.java"));
+
+        add(layout, container, sourceButton);
     }
 
     private Component createCard(String cardHeader, String cardContent) {
