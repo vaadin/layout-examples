@@ -6,26 +6,25 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H3;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@Route("horizontal")
-@PageTitle("HorizontalLayout Examples")
-public class HorizontalExamplesView extends VerticalLayout {
+@Route("vertical")
+@PageTitle("VerticalLayout Examples")
+public class VerticalExamplesView extends VerticalLayout {
 
-    public HorizontalExamplesView() {
+    public VerticalExamplesView() {
         setSpacing(true);
         setPadding(true);
 
-        add(new H2("Horizontal Layout Examples"));
+        add(new H2("Vertical Layout Examples"));
 
-        add(new Text("Each layout has a width of 100%, and a gray background color for better visibility."));
+        add(new Text("Each layout has a width of 600px, and a gray background color for better visibility."));
 
         category("Margin and Padding");
 
-        HorizontalLayout layout = createLayout("Basic example with default settings");
+        VerticalLayout layout = createLayout("Basic example with default settings");
         layout.add(button("Button one"), button("Button two"));
 
         layout = createLayout("Basic example without spacing");
@@ -49,47 +48,47 @@ public class HorizontalExamplesView extends VerticalLayout {
 
         layout = createLayout("Enable scrolling");
         layout.setPadding(true);
+        layout.setHeight("300px");
         layout.add(button("Button"), button("Button"), button("Button"), button("Button"), button("Button"), button("Button"), button("Button"),
-                button("Button"), button("Button"), button("Button"), button("Button"), button("Button"));
-        Button button = button("Mushroom");
-        button.getStyle().set("flex-shrink", "0"); // necessary so that the layout doesn't try to shrink the button. The final
-                                                   // button doesn't have this addition and demonstrates the issue.
-        layout.add(button);
-        button = button("Mushroom");
-        layout.add(button);
-        layout.getStyle().set("overflow", "scroll");
+                button("Button"), button("Button"), button("Button"), button("Button"), button("Button"), button("Mushroom"), button("Mushroom"));
+        layout.getStyle().set("overflow", "scroll");// enable scrolling when content doesn't fit
+
+        layout = createLayout("Partial content scrolling with overflow");
+        layout.setPadding(true);
+        VerticalLayout scrollingLayout = new VerticalLayout(button("Contentbutton"));
+        scrollingLayout.getStyle().set("background-color", "#eee");
+        scrollingLayout.setPadding(false);
+        scrollingLayout.setMaxHeight("190px"); // restrict the max height
+        scrollingLayout.getStyle().set("overflow", "scroll"); // enable scrolling when content doesn't fit
+        Button button = button("Click to add a button");
+        button.addClickListener(e -> scrollingLayout.add(button("Contentbutton")));
+        layout.add(button, scrollingLayout, button("Footerbutton"));
 
         category("Size and Positioning");
 
-        layout = createLayout("Height set to 150px (with padding)");
-        layout.setPadding(true);
-        layout.setHeight("150px");
-        layout.add(button("Button one"), button("Button two"));
-
         layout = createLayout("Aligning all items");
         layout.setPadding(true);
-        layout.setHeight("150px");
         layout.setAlignItems(Alignment.END);
         layout.add(button("Button one"), button("Button two"));
 
         layout = createLayout("Aligning individual items");
         layout.setPadding(true);
-        layout.setHeight("150px");
         button = button("Align start");
         layout.add(button);
-        layout.setVerticalComponentAlignment(Alignment.START, button);
+        layout.setHorizontalComponentAlignment(Alignment.START, button);
         button = button("Align center");
         layout.add(button);
-        layout.setVerticalComponentAlignment(Alignment.CENTER, button);
+        layout.setHorizontalComponentAlignment(Alignment.CENTER, button);
         button = button("Align end");
         layout.add(button);
-        layout.setVerticalComponentAlignment(Alignment.END, button);
+        layout.setHorizontalComponentAlignment(Alignment.END, button);
         button = button("Strech");
         layout.add(button);
-        button.setHeight("auto");
+        layout.setHorizontalComponentAlignment(Alignment.STRETCH, button);
 
         layout = createLayout("Expanding one component");
         layout.setPadding(true);
+        layout.setHeight("300px");
         button = button("Button one");
         layout.add(button, button("Button two"));
         layout.setFlexGrow(1, button); // this expands the button
@@ -97,23 +96,29 @@ public class HorizontalExamplesView extends VerticalLayout {
         layout = createLayout("Expanding both components");
         layout.setPadding(true);
         layout.addAndExpand(button("Button one"), button("Button two")); // adds and flex-grows both components
+        // setHeight needs to be defined last because of
+        // https://github.com/vaadin/vaadin-ordered-layout-flow/issues/134
+        layout.setHeight("300px");
 
         layout = createLayout("Split positioning (without expanding either component)");
         layout.setPadding(true);
+        layout.setHeight("300px");
         button = button("Button two");
-        button.getStyle().set("margin-left", "auto"); // expands the empty space left of button two
+        button.getStyle().set("margin-top", "auto"); // expands the empty space above button two
         layout.add(button("Button one"), button);
 
         layout = createLayout("Advanced split positioning 1");
         layout.setPadding(true);
+        layout.setHeight("400px");
         button = button("Button two");
-        button.getStyle().set("margin-right", "auto");// expands the empty space right of button two
+        button.getStyle().set("margin-bottom", "auto");// expands the empty space below button two
         layout.add(button("Button one"), button, button("Button three"));
 
         layout = createLayout("Advanced split positioning 2");
         layout.setPadding(true);
+        layout.setHeight("400px");
         button = button("Button two");
-        button.getStyle().set("margin-left", "auto");// expands the empty space left of button two
+        button.getStyle().set("margin-top", "auto");// expands the empty space above button two
         layout.add(button("Button one"), button, button("Button three"));
 
     }
@@ -128,9 +133,9 @@ public class HorizontalExamplesView extends VerticalLayout {
         return button;
     }
 
-    private HorizontalLayout createLayout(String caption) {
-        HorizontalLayout hl = new HorizontalLayout();
-        hl.setWidthFull();
+    private VerticalLayout createLayout(String caption) {
+        VerticalLayout hl = new VerticalLayout();
+        hl.setWidth("600px");
         hl.getStyle().set("background-color", "#dddddd");
         add(new Text(caption));
         add(hl);

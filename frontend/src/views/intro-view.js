@@ -67,8 +67,12 @@ class IntroView extends PolymerElement {
                 <div class="card-list">
                     <ex-card>
                         <a slot="title" router-link href="horizontal">Horizontal Layouts</a>
-                        <p>Simple examples using a HorizontaLayout</p>
+                        <p>Simple examples using a HorizontalLayout</p>
                     </ex-card>
+			        <ex-card>
+				        <a slot="title" router-link href="vertical">Vertical Layouts</a>
+				        <p>Simple examples using a VerticalLayout</p>
+			        </ex-card>
                 </div>
 
                 <div class="card-list">
