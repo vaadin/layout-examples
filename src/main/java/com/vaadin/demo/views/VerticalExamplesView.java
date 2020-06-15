@@ -55,7 +55,8 @@ public class VerticalExamplesView extends VerticalLayout {
 
         layout = createLayout("Partial content scrolling with overflow");
         layout.setPadding(true);
-        VerticalLayout scrollingLayout = new VerticalLayout(button("Contentbutton"));
+        VerticalLayout scrollingLayout = new VerticalLayout(button("Button"), button("Button"), button("Button"), button("Button"), button("Button"), button("Button"), button("Button"),
+                button("Button"), button("Button"), button("Button"), button("Button"), button("Button"), button("Mushroom"), button("Mushroom"));
         scrollingLayout.getStyle().set("background-color", "#eee");
         scrollingLayout.setPadding(false);
         scrollingLayout.setMaxHeight("190px"); // restrict the max height
