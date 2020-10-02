@@ -4,7 +4,6 @@
   "dependencies": {
     "@polymer/polymer": "3.2.0",
     "@webcomponents/webcomponentsjs": "^2.2.10",
-    "github-corner": "2.0.3",
     "@vaadin/vaadin-crud": "1.1.0",
     "@vaadin/vaadin-grid": "5.5.3",
     "@vaadin/vaadin-icons": "4.3.1",
@@ -120,6 +119,6 @@
       "webpack-merge": "4.2.2",
       "webpack-dev-server": "3.10.3"
     },
-    "hash": "33adad243bba3012db9f71974984daa34d7ddb1963e79824655df87c849fbbf5"
+    "hash": "51c71dd1b42c8f6dc7b235498a37add889c08660b38dee882b1a73b601da6d33"
   }
 }

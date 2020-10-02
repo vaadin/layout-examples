@@ -1,7 +1,5 @@
 package com.vaadin.demo;
 
-import org.vaadin.googleanalytics.tracking.EnableGoogleAnalytics;
-
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.page.BodySize;
@@ -15,7 +13,6 @@ import com.vaadin.flow.theme.lumo.Lumo;
 @JsModule("./styles/shared-styles.js")
 @JsModule("./src/utils.js")
 @Theme(value = Lumo.class, variant = Lumo.LIGHT)
-@EnableGoogleAnalytics(value = "UA-658457-6", pageviewPrefix = "layout-examples/")
 @BodySize
 public class MainView extends Div implements RouterLayout {
     public MainView() {

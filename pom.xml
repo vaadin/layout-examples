@@ -115,21 +115,15 @@
         </dependency>
 
         <dependency>
-            <groupId>org.vaadin.artur</groupId>
-            <artifactId>github-corner</artifactId>
-            <version>2.0.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.vaadin.addons</groupId>
-            <artifactId>googleanalyticstracker</artifactId>
-            <version>4.0.0</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.flowingcode.addons.carousel</groupId>
             <artifactId>carousel-addon</artifactId>
             <version>2.0.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.vaadin.example</groupId>
+            <artifactId>vaadin-demo-utilities</artifactId>
+            <version>1.0.1</version>
         </dependency>
 
     </dependencies>
