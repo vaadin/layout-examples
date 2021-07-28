@@ -1,11 +1,11 @@
-# Layout Examples for Vaadin 14
+# Layout Examples for Vaadin Flow
 
-This project was created from https://start.vaadin.com. It's a fully working Vaadin application that you continue developing locally.
+This project is a fully working Vaadin application that you continue developing locally.
 It has all the necessary dependencies and files to help you get going. 
 
 [![Vaadin 14 Layout Example](layouts-example.png)](https://labs.vaadin.com/layout-examples/)
 
-The project is a standard Maven project, so you can import it to your IDE of choice. You'll need to have Java 8+ and Node.js 10+ installed.
+The project is a standard Maven project, so you can import it to your IDE of choice.
 
 To run from the command line, use `mvn jetty:run` and open [http://localhost:8080](http://localhost:8080) in your browser.
 
