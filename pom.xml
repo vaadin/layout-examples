@@ -13,7 +13,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>14.2.1</vaadin.version>
+        <vaadin.version>20.0.5</vaadin.version>
     </properties>
 
     <repositories>
@@ -112,12 +112,6 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.vaadin.artur</groupId>
-            <artifactId>github-corner</artifactId>
-            <version>2.0.3</version>
         </dependency>
 
         <dependency>
