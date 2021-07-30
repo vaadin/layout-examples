@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.vaadin.flow.component.tabs.TabsVariant;
-import org.vaadin.artur.github_corner.GitHubCorner;
 
 import com.vaadin.demo.views.IntroView;
 import com.vaadin.flow.component.Component;
@@ -28,7 +27,6 @@ public class AppNavLayout extends AppLayout implements AfterNavigationObserver {
         getElement().getThemeList().add("app-nav-layout");
         menu = createMenuTabs();
         addToNavbar(menu);
-        addToNavbar(new GitHubCorner("vaadin", "layout-examples"));
     }
 
     private static Tabs createMenuTabs() {

@@ -46,7 +46,6 @@
     "@webcomponents/webcomponentsjs": "^2.2.10",
     "@xpertsea/paper-slider": "3.0.0",
     "construct-style-sheets-polyfill": "2.4.16",
-    "github-corner": "2.0.3",
     "lit-element": "2.5.1",
     "lit-html": "1.4.1"
   },
@@ -140,6 +139,6 @@
       "webpack-dev-server": "3.11.0",
       "webpack-merge": "4.2.2"
     },
-    "hash": "d35d9e111bcb418f5c0a820237491ff8da9e14cdb1dfb334c77a893f57258875"
+    "hash": "63dd9afc1e39f03460345d3b61d4ef42f9d426c24ca3294068b077bc80ebe929"
   }
 }
