@@ -15,6 +15,7 @@ build/
 
 # NPM
 node_modules
+frontend/generated/
 webpack.generated.js
 
 bower_components/
