@@ -10,19 +10,18 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Header;
 import com.vaadin.flow.component.html.Paragraph;
-import com.vaadin.flow.component.polymertemplate.Id;
-import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
-import com.vaadin.flow.templatemodel.TemplateModel;
+import com.vaadin.flow.component.littemplate.LitTemplate;
+import com.vaadin.flow.component.template.Id;
 
 @Route(value = "fixed-nav-sticky-footer", layout = MainView.class)
 @PageTitle("Fixed Nav & Sticky Footer")
 @Tag("fixed-nav-sticky-footer-view")
 @JsModule("./src/views/fixed-nav-sticky-footer-view.js")
-public class FixedNavStickyFooterView extends PolymerTemplate<TemplateModel> {
+public class FixedNavStickyFooterView extends LitTemplate {
 
     @Id("header")
     Header header;

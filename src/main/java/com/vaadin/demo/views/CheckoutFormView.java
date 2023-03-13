@@ -1,5 +1,10 @@
 package com.vaadin.demo.views;
 
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
 import com.vaadin.demo.entity.Product;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
@@ -21,14 +26,9 @@ import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 import com.vaadin.flow.component.radiobutton.RadioGroupVariant;
 import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.data.renderer.TemplateRenderer;
+import com.vaadin.flow.data.renderer.LitRenderer;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-
-import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 
 @Route("checkout-form")
 @PageTitle("Checkout form")
@@ -205,12 +205,12 @@ public class CheckoutFormView extends VerticalLayout {
 
         // Using Template to show two properties, one on top of another
         // property.
-        grid.addColumn(TemplateRenderer.<Product> of(
+        grid.addColumn(LitRenderer.<Product> of(
                 "<div><b>[[item.name]]</b><br> <small>[[item.description]]</small></div>")
                 .withProperty("name", Product::getName)
                 .withProperty("description", Product::getDescription))
                 .setWidth("70%");
-        grid.addColumn(TemplateRenderer
+        grid.addColumn(LitRenderer
                 .<Product> of("<div>[[item.price]]</div>").withProperty("price",
                         order -> moneyFormat.format(order.getPrice())))
                 .setTextAlign(ColumnTextAlign.END).setWidth("30%");

@@ -19,17 +19,16 @@ import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.menubar.MenuBar;
 import com.vaadin.flow.component.menubar.MenuBarVariant;
-import com.vaadin.flow.component.polymertemplate.Id;
-import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.templatemodel.TemplateModel;
+import com.vaadin.flow.component.littemplate.LitTemplate;
+import com.vaadin.flow.component.template.Id;
 
 @Route(value = "pricing", layout = MainView.class)
 @PageTitle("Pricing")
 @Tag("pricing-view")
 @JsModule("./src/views/pricing-view.js")
-public class PricingView extends PolymerTemplate<TemplateModel> {
+public class PricingView extends LitTemplate {
 
     @Id("header")
     Div header;

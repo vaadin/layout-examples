@@ -5,20 +5,19 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.templatemodel.TemplateModel;
 import com.vaadin.demo.MainView;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
-import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
+import com.vaadin.flow.component.littemplate.LitTemplate;
+import com.vaadin.flow.component.template.Id;
 
 @Route(value = "three-columns", layout = MainView.class)
 @PageTitle("Three Columns")
 @Tag("three-columns-view")
 @JsModule("./src/views/three-columns-view.js")
-public class ThreeColumnsView extends PolymerTemplate<TemplateModel> {
+public class ThreeColumnsView extends LitTemplate {
 
     @Id("header")
     Div header;
