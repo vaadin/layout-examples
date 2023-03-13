@@ -1,4 +1,4 @@
-import { html, LitElement, css } from "lit";
+import { html, LitElement, css, render } from "lit";
 
 import "@vaadin/button/vaadin-button";
 
@@ -43,7 +43,8 @@ class ExAddContent extends LitElement {
           sagittis nunc.
         </p>
       `;
-    this.appendChild(document.importNode(this.__contentTemplate.content, true));
+
+    render(this.__contentTemplate, this);
   }
 }
 
