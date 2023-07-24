@@ -13,7 +13,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>24.0.0</vaadin.version>
+        <vaadin.version>24.1.4</vaadin.version>
     </properties>
 
     <repositories>
@@ -129,6 +129,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
+            </plugin>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
             </plugin>
             <!-- Jetty plugin for easy testing without a server -->
             <plugin>
