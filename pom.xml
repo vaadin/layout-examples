@@ -40,7 +40,6 @@
             <snapshots><enabled>false</enabled></snapshots>
         </pluginRepository>
         <!-- Repository needed for prerelease versions of Vaadin -->
-        <!--
         <pluginRepository>
             <id>vaadin-prereleases</id>
             <url>https://maven.vaadin.com/vaadin-prereleases</url>
@@ -51,7 +50,6 @@
             <url>https://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
             <releases><enabled>false</enabled></releases>
         </pluginRepository>
-        -->
     </pluginRepositories>
 
     <dependencyManagement>
