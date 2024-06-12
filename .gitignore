@@ -15,7 +15,7 @@ build/
 
 # NPM
 node_modules
-frontend/generated/
+src/main/frontend/generated/
 
 bower_components/
 .vscode
