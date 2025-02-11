@@ -3,15 +3,15 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@polymer/polymer": "3.5.2",
-    "@vaadin/bundles": "24.6.3",
+    "@vaadin/bundles": "24.6.4",
     "@vaadin/common-frontend": "0.0.19",
-    "@vaadin/polymer-legacy-adapter": "24.6.3",
-    "@vaadin/react-components": "24.6.3",
-    "@vaadin/react-components-pro": "24.6.3",
+    "@vaadin/polymer-legacy-adapter": "24.6.4",
+    "@vaadin/react-components": "24.6.4",
+    "@vaadin/react-components-pro": "24.6.4",
     "@vaadin/vaadin-development-mode-detector": "2.0.7",
-    "@vaadin/vaadin-lumo-styles": "24.6.3",
-    "@vaadin/vaadin-material-styles": "24.6.3",
-    "@vaadin/vaadin-themable-mixin": "24.6.3",
+    "@vaadin/vaadin-lumo-styles": "24.6.4",
+    "@vaadin/vaadin-material-styles": "24.6.4",
+    "@vaadin/vaadin-themable-mixin": "24.6.4",
     "@vaadin/vaadin-usage-statistics": "2.1.3",
     "@xpertsea/paper-slider": "3.0.0",
     "construct-style-sheets-polyfill": "3.1.0",
@@ -20,11 +20,11 @@
     "proj4": "2.12.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router-dom": "6.28.0"
+    "react-router-dom": "6.29.0"
   },
   "devDependencies": {
     "@babel/preset-react": "7.26.3",
-    "@preact/signals-react-transform": "0.5.0",
+    "@preact/signals-react-transform": "0.5.1",
     "@rollup/plugin-replace": "6.0.2",
     "@rollup/pluginutils": "5.1.4",
     "@types/react": "18.3.18",
@@ -33,7 +33,7 @@
     "async": "3.2.6",
     "glob": "10.4.5",
     "rollup-plugin-brotli": "3.1.0",
-    "rollup-plugin-visualizer": "5.13.1",
+    "rollup-plugin-visualizer": "5.14.0",
     "strip-css-comments": "5.0.0",
     "transform-ast": "2.4.4",
     "typescript": "5.7.3",
@@ -46,15 +46,15 @@
   "vaadin": {
     "dependencies": {
       "@polymer/polymer": "3.5.2",
-      "@vaadin/bundles": "24.6.3",
+      "@vaadin/bundles": "24.6.4",
       "@vaadin/common-frontend": "0.0.19",
-      "@vaadin/polymer-legacy-adapter": "24.6.3",
-      "@vaadin/react-components": "24.6.3",
-      "@vaadin/react-components-pro": "24.6.3",
+      "@vaadin/polymer-legacy-adapter": "24.6.4",
+      "@vaadin/react-components": "24.6.4",
+      "@vaadin/react-components-pro": "24.6.4",
       "@vaadin/vaadin-development-mode-detector": "2.0.7",
-      "@vaadin/vaadin-lumo-styles": "24.6.3",
-      "@vaadin/vaadin-material-styles": "24.6.3",
-      "@vaadin/vaadin-themable-mixin": "24.6.3",
+      "@vaadin/vaadin-lumo-styles": "24.6.4",
+      "@vaadin/vaadin-material-styles": "24.6.4",
+      "@vaadin/vaadin-themable-mixin": "24.6.4",
       "@vaadin/vaadin-usage-statistics": "2.1.3",
       "@xpertsea/paper-slider": "3.0.0",
       "construct-style-sheets-polyfill": "3.1.0",
@@ -63,11 +63,11 @@
       "proj4": "2.12.1",
       "react": "18.3.1",
       "react-dom": "18.3.1",
-      "react-router-dom": "6.28.0"
+      "react-router-dom": "6.29.0"
     },
     "devDependencies": {
       "@babel/preset-react": "7.26.3",
-      "@preact/signals-react-transform": "0.5.0",
+      "@preact/signals-react-transform": "0.5.1",
       "@rollup/plugin-replace": "6.0.2",
       "@rollup/pluginutils": "5.1.4",
       "@types/react": "18.3.18",
@@ -76,7 +76,7 @@
       "async": "3.2.6",
       "glob": "10.4.5",
       "rollup-plugin-brotli": "3.1.0",
-      "rollup-plugin-visualizer": "5.13.1",
+      "rollup-plugin-visualizer": "5.14.0",
       "strip-css-comments": "5.0.0",
       "transform-ast": "2.4.4",
       "typescript": "5.7.3",
@@ -86,7 +86,7 @@
       "workbox-core": "7.3.0",
       "workbox-precaching": "7.3.0"
     },
-    "hash": "b6ead880ed21d519f8b665fd6b96bbcf321a3b2cdb3631199a27be4ad0bc03fd"
+    "hash": "f08ec5eac6c78ad02f1f3a829665e9a6f8b9af265e4b60c6dff344b4d93886c2"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
