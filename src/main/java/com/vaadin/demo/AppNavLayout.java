@@ -1,5 +1,7 @@
 package com.vaadin.demo;
 
+import com.vaadin.flow.server.auth.AnonymousAllowed;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +21,7 @@ import com.vaadin.flow.router.ParentLayout;
 import com.vaadin.flow.router.RouterLink;
 
 @ParentLayout(MainView.class)
+@AnonymousAllowed
 public class AppNavLayout extends AppLayout implements AfterNavigationObserver {
 
     private final Tabs menu;

@@ -1,5 +1,7 @@
 package com.vaadin.demo.views;
 
+import com.vaadin.flow.server.auth.AnonymousAllowed;
+
 import com.vaadin.demo.MainView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -16,6 +18,7 @@ import com.vaadin.flow.router.Route;
 
 @Route(value = "app-layout-basic", layout = MainView.class)
 @PageTitle("Basic App Layout")
+@AnonymousAllowed
 public class BasicAppLayoutView extends AppLayout {
 
     public BasicAppLayoutView() {
