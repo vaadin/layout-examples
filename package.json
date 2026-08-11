@@ -20,12 +20,12 @@
     "proj4": "2.15.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router": "7.18.1"
+    "react-router": "7.18.2"
   },
   "devDependencies": {
     "@babel/preset-react": "7.29.7",
-    "@babel/types": "7.29.7",
-    "@preact/signals-react-transform": "0.8.1",
+    "@babel/types": "7.29.8",
+    "@preact/signals-react-transform": "0.8.2",
     "@rollup/plugin-replace": "6.0.3",
     "@rollup/pluginutils": "5.4.0",
     "@types/react": "18.3.31",
@@ -39,7 +39,7 @@
     "transform-ast": "2.4.4",
     "typescript": "5.9.3",
     "vite": "7.3.6",
-    "vite-plugin-checker": "0.14.4"
+    "vite-plugin-checker": "0.14.5"
   },
   "vaadin": {
     "dependencies": {
@@ -61,12 +61,12 @@
       "proj4": "2.15.0",
       "react": "18.3.1",
       "react-dom": "18.3.1",
-      "react-router": "7.18.1"
+      "react-router": "7.18.2"
     },
     "devDependencies": {
       "@babel/preset-react": "7.29.7",
-      "@babel/types": "7.29.7",
-      "@preact/signals-react-transform": "0.8.1",
+      "@babel/types": "7.29.8",
+      "@preact/signals-react-transform": "0.8.2",
       "@rollup/plugin-replace": "6.0.3",
       "@rollup/pluginutils": "5.4.0",
       "@types/react": "18.3.31",
@@ -80,9 +80,9 @@
       "transform-ast": "2.4.4",
       "typescript": "5.9.3",
       "vite": "7.3.6",
-      "vite-plugin-checker": "0.14.4"
+      "vite-plugin-checker": "0.14.5"
     },
-    "hash": "a59eafa0cff6ea50209d58473afaed10cd3c1bf99c51b9c1f73653cbc1f6ad07",
+    "hash": "3905e4c3cefa9b4758a481169539c4ea3e507762d6293027f0940aa55c58d3e3",
     "overrides": {
       "@polymer/polymer": "$@polymer/polymer",
       "@vaadin/a11y-base": "24.10.4",
