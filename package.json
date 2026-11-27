@@ -41,7 +41,7 @@
     "transform-ast": "2.4.4",
     "typescript": "npm:@typescript/typescript6@6.0.2",
     "vite": "8.3.8",
-    "vite-plugin-checker": "1.0.0"
+    "vite-plugin-checker": "1.1.0"
   },
   "overrides": {
     "@vaadin/a11y-base": "25.3.7",
@@ -174,8 +174,8 @@
       "transform-ast": "2.4.4",
       "typescript": "npm:@typescript/typescript6@6.0.2",
       "vite": "8.3.8",
-      "vite-plugin-checker": "1.0.0"
+      "vite-plugin-checker": "1.1.0"
     },
-    "hash": "c49076ff0cfd0e1e754465aae20d2e4b3ca8c1b9abec17f8c636a95ab0d88f20"
+    "hash": "6c7b465567a350629ea3f1850b53757fe8f6f5584acdd22315aadd1101bc9465"
   }
 }
